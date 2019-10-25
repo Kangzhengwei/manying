@@ -1,4 +1,4 @@
-package com.kzw.manying;
+package com.kzw.manying.Util;
 
 /**
  * author: kang4

@@ -1,14 +1,14 @@
-package com.kzw.manying;
+package com.kzw.manying.widget;
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kzw.manying.R;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.video.base.GSYBaseVideoPlayer;
 
@@ -46,6 +46,7 @@ public class VideoPlayer extends StandardGSYVideoPlayer {
     @Override
     protected void init(final Context context) {
         super.init(context);
+
         tvAlert = findViewById(R.id.video_alert);
         mBackButton = findViewById(R.id.back);
         tvRate = findViewById(R.id.play_rate);

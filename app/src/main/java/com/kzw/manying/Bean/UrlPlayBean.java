@@ -1,4 +1,4 @@
-package com.kzw.manying;
+package com.kzw.manying.Bean;
 
 import java.io.Serializable;
 import java.util.List;

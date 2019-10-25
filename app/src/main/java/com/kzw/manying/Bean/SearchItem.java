@@ -1,4 +1,4 @@
-package com.kzw.manying;
+package com.kzw.manying.Bean;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,7 +14,17 @@ public class SearchItem implements Serializable {
     //0:ok资源网，1：最大资源网，2：永久资源网 3:酷哈资源
     public String name;
     public String url;
+    public String siteName;
     public int type;
+
+
+    public String getSiteName() {
+        return siteName;
+    }
+
+    public void setSiteName(String siteName) {
+        this.siteName = siteName;
+    }
 
     public int getType() {
         return type;
@@ -30,9 +40,10 @@ public class SearchItem implements Serializable {
 
     }
 
-    public SearchItem(String name, String url) {
+    public SearchItem(String name, String url,String siteName) {
         this.name = name;
         this.url = url;
+        this.siteName=siteName;
     }
 
     public String getName() {

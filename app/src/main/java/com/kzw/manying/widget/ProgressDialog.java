@@ -1,10 +1,13 @@
-package com.kzw.manying;
+package com.kzw.manying.widget;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import com.kzw.manying.R;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -15,7 +18,7 @@ import androidx.annotation.NonNull;
 public class ProgressDialog extends Dialog {
 
     public ProgressDialog(@NonNull Context context) {
-        super(context,R.style.transparent_dialog);
+        super(context, R.style.transparent_dialog);
         init(context);
     }
     public void init(final Context context) {

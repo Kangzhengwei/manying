@@ -2,6 +2,9 @@ package com.kzw.manying;
 
 import android.app.Application;
 
+import com.kzw.manying.Util.Constant;
+import com.kzw.manying.Util.OkhClientUtil;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -11,15 +14,20 @@ import io.realm.RealmConfiguration;
  * Description:
  */
 public class App extends Application {
+    private static Application instance;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        OkhClientUtil.getInstance().loadUrl(Constant.BASEURL);
-        OkhClientUtil.getInstance().loadUrl(Constant.ZUIDA_BASEURL);
-        OkhClientUtil.getInstance().loadUrl(Constant.YONGJIU_BASEURL);
-        OkhClientUtil.getInstance().loadUrl(Constant.KUHA_BASEURL);
+        instance = this;
+        OkhClientUtil.getInstance().init();
         initDataBase();
     }
+
+    public static Application getApplication() {
+        return instance;
+    }
+
     /**
      * 初始化数据库
      */

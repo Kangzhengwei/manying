@@ -1,4 +1,4 @@
-package com.kzw.manying;
+package com.kzw.manying.widget;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.kzw.manying.R;
 
 /**
  * Created by Android on 2018/8/7.

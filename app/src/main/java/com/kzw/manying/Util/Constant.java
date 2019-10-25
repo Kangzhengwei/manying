@@ -1,4 +1,4 @@
-package com.kzw.manying;
+package com.kzw.manying.Util;
 
 /**
  * author: kang4
@@ -7,17 +7,14 @@ package com.kzw.manying;
  */
 public class Constant {
     public static final String BASEURL = "https://www.okzy.co";
-
     public static final String SEARCH = BASEURL + "/index.php?m=vod-search";
 
 
     public static final String ZUIDA_BASEURL = "http://www.zuidazy1.com";
-
     public static final String ZUIDA_SEARCH = ZUIDA_BASEURL + "/index.php?m=vod-search";
 
 
     public static final String YONGJIU_BASEURL = "http://www.yongjiuzy.cc";
-
     public static final String YONGJIU_SEARCH = YONGJIU_BASEURL + "/index.php?m=vod-search";
 
     public static final String KUHA_BASEURL = "http://www.666zy.com";

@@ -1,11 +1,17 @@
-package com.kzw.manying;
+package com.kzw.manying.UI.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.kzw.manying.App;
+import com.kzw.manying.Bean.SearchItem;
+import com.kzw.manying.R;
+import com.kzw.manying.Util.SpanUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +56,15 @@ public class SearchListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int i) {
         final SearchItem item = list.get(i);
-        ((ViewHolder) viewHolder).textView.setText(item.getName());
+        ((ViewHolder) viewHolder).textView.setText(new SpanUtils()
+                .append(item.getSiteName())
+                .setBold()
+                .setForegroundColor(App.getApplication().getResources().getColor(R.color.colorPrimary))
+                .append(" : ")
+                .setBold()
+                .setForegroundColor(App.getApplication().getResources().getColor(R.color.colorPrimary))
+                .append(item.getName())
+                .create());
         ((ViewHolder) viewHolder).item.setOnClickListener(v -> {
             if (clickListener != null) {
                 clickListener.itemClick(item);

@@ -1,11 +1,11 @@
-package com.kzw.manying;
+package com.kzw.manying.Util;
 
-
-import android.util.Log;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +15,6 @@ import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 /**
  * author: kang4
@@ -45,10 +44,16 @@ public class OkhClientUtil {
         return sInstance;
     }
 
-    public OkHttpClient getOkHttpClient() {
-        return mOkHttpClient;
+    public void init() {
+        List<String> list = new ArrayList<>();
+        list.add(Constant.BASEURL);
+        list.add(Constant.ZUIDA_BASEURL);
+        list.add(Constant.YONGJIU_BASEURL);
+        list.add(Constant.KUHA_BASEURL);
+        for (String url : list) {
+            loadUrl(url);
+        }
     }
-
 
     public void loadUrl(String url) {
         Request.Builder builder = new Request.Builder()
@@ -96,7 +101,9 @@ public class OkhClientUtil {
         FormBody.Builder bodybuilder = new FormBody.Builder();
         for (String key : params.keySet()) {
             Object value = params.get(key);
-            bodybuilder.add(key, value.toString());
+            if (value != null) {
+                bodybuilder.add(key, value.toString());
+            }
         }
         FormBody body = bodybuilder.build();
         Request.Builder builder = new Request.Builder().url(url).post(body)

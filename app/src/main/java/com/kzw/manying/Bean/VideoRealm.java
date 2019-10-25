@@ -1,4 +1,4 @@
-package com.kzw.manying;
+package com.kzw.manying.Bean;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,6 +15,15 @@ public class VideoRealm extends RealmObject implements Serializable {
     public String name;
     public String url;
     public int type;
+    public String siteName;
+
+    public String getSiteName() {
+        return siteName;
+    }
+
+    public void setSiteName(String siteName) {
+        this.siteName = siteName;
+    }
 
     public int getType() {
         return type;
