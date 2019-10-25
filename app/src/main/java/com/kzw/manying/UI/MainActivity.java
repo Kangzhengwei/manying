@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void goIntent(SearchItem item) {
         Intent intent = new Intent();
-        intent.setClass(MainActivity.this, VideoDetailActivity.class);
+        intent.setClass(MainActivity.this, VideoPlayActivity.class);
         intent.putExtra("item", item);
         startActivity(intent);
     }

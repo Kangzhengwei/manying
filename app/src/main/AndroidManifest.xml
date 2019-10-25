@@ -17,7 +17,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".UI.SearchActivity"></activity>
         <activity
-            android:name=".UI.VideoDetailActivity"
+            android:name=".UI.VideoPlayActivity"
             android:configChanges="keyboard|orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait" />
         <activity android:name=".UI.MainActivity">

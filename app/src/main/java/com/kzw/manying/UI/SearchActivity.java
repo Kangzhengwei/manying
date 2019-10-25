@@ -60,7 +60,7 @@ public class SearchActivity extends AppCompatActivity  implements VideoSearchInt
 
     private void goIntent(SearchItem item) {
         Intent intent = new Intent();
-        intent.setClass(this, VideoDetailActivity.class);
+        intent.setClass(this, VideoPlayActivity.class);
         intent.putExtra("item", item);
         startActivity(intent);
     }

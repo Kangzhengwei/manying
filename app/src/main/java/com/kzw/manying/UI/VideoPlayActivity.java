@@ -24,7 +24,7 @@ import butterknife.OnClick;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class VideoDetailActivity extends AppCompatActivity implements VideoSeriesInterface {
+public class VideoPlayActivity extends AppCompatActivity implements VideoSeriesInterface {
 
     @InjectView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -51,7 +51,7 @@ public class VideoDetailActivity extends AppCompatActivity implements VideoSerie
         //是否可以滑动调整
         player.setIsTouchWiget(true);
         player.getFullscreenButton().setOnClickListener(v -> {
-                    player.startWindowFullscreen(VideoDetailActivity.this, false, true);
+                    player.startWindowFullscreen(VideoPlayActivity.this, false, true);
                 }
         );
         player.getBackButton().setOnClickListener(v -> onBackPressed());
