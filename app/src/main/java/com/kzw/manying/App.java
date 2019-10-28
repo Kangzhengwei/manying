@@ -2,7 +2,6 @@ package com.kzw.manying;
 
 import android.app.Application;
 
-import com.kzw.manying.Util.Constant;
 import com.kzw.manying.Util.OkhClientUtil;
 
 import io.realm.Realm;
@@ -14,6 +13,7 @@ import io.realm.RealmConfiguration;
  * Description:
  */
 public class App extends Application {
+
     private static Application instance;
 
     @Override

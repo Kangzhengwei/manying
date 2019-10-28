@@ -1,7 +1,6 @@
 package com.kzw.manying.Bean;
 
 import java.io.Serializable;
-import java.util.List;
 
 import io.realm.RealmObject;
 

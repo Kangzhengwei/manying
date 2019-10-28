@@ -50,9 +50,7 @@ public class VideoPlayActivity extends AppCompatActivity implements VideoSeriesI
     public void initview() {
         //是否可以滑动调整
         player.setIsTouchWiget(true);
-        player.getFullscreenButton().setOnClickListener(v -> {
-                    player.startWindowFullscreen(VideoPlayActivity.this, false, true);
-                }
+        player.getFullscreenButton().setOnClickListener(v -> player.startWindowFullscreen(VideoPlayActivity.this, false, true)
         );
         player.getBackButton().setOnClickListener(v -> onBackPressed());
         player.setReleaseWhenLossAudio(false);

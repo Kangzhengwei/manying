@@ -43,7 +43,6 @@ import android.text.style.UnderlineSpan;
 import android.text.style.UpdateAppearance;
 import android.util.Log;
 
-
 import com.kzw.manying.App;
 
 import java.io.IOException;
